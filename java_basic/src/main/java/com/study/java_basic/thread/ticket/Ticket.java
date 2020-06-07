@@ -6,13 +6,20 @@ package com.study.java_basic.thread.ticket;
  */
 public class Ticket extends Thread{
 
-    private int ticketNum = 5;
+    private static int ticketNum = 10;
 
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            if (ticketNum > 0) {
-                System.out.println(Thread.currentThread().getName() + "正在卖第" + ticketNum-- + "张票");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            synchronized (Ticket.class) {
+                if (ticketNum > 0) {
+                    System.out.println(Thread.currentThread().getName() + "正在卖第" + ticketNum-- + "张票");
+                }
             }
         }
     }
