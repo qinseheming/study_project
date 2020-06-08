@@ -1,4 +1,4 @@
-package com.study.design_model;
+package com.study.designmodel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
