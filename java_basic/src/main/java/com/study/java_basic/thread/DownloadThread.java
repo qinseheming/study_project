@@ -1,10 +1,6 @@
 package com.study.java_basic.thread;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
+//import org.apache.commons.io.FileUtils;
 
 public class DownloadThread implements Runnable {
     private String url;
@@ -17,11 +13,11 @@ public class DownloadThread implements Runnable {
 
     @Override
     public void run() {
-        try {
-            FileUtils.copyURLToFile(new URL(url), new File(name));
-            System.out.println(name);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            FileUtils.copyURLToFile(new URL(url), new File(name));
+//            System.out.println(name);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }
