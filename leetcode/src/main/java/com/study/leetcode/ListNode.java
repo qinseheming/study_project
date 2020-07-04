@@ -2,7 +2,7 @@ package com.study.leetcode;
 
 /**
  * Definition for singly-linked list.
- * 单链表
+ * 单向链表
  *
  * @author : yangming
  * @date : 2019/9/17
@@ -13,7 +13,7 @@ public class ListNode {
 
     public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 
