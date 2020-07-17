@@ -2,6 +2,7 @@ package com.study.leetcode.util;
 
 import com.study.leetcode.ListNode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,5 +31,15 @@ public class ListNodeUtil {
 
         }
         return head;
+    }
+
+    public static void print(ListNode node) {
+        List<Integer> list = new ArrayList<>();
+        while (node != null) {
+            list.add(node.val);
+            node = node.next;
+        }
+        String result = list.stream().map(Object::toString).collect(Collectors.joining(" --> "));
+        System.out.println(result);
     }
 }
